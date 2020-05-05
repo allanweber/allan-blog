@@ -16,16 +16,6 @@ export const aboutPropTypes = {
         fluid: PropTypes.object.isRequired,
       }).isRequired,
     }).isRequired,
-    flagIt: PropTypes.shape({
-      childImageSharp: PropTypes.shape({
-        fixed: PropTypes.object.isRequired,
-      }),
-    }),
-    flagEn: PropTypes.shape({
-      childImageSharp: PropTypes.shape({
-        fixed: PropTypes.object.isRequired,
-      }),
-    }),
     skillIcons: PropTypes.object.isRequired,
     toolIcons: PropTypes.object.isRequired,
   }),
@@ -35,7 +25,7 @@ class About extends React.Component {
   static propTypes = aboutPropTypes
 
   render() {
-    let { profilePhoto, flagIt, skillIcons, toolIcons } = this.props.data
+    let { profilePhoto, skillIcons, toolIcons } = this.props.data
     return (
       <Layout>
         <SEO
@@ -48,26 +38,22 @@ class About extends React.Component {
             <Img fluid={profilePhoto.childImageSharp.fluid} />
           </div>
           <div className={style.content}>
-            <h1>Hi, I'm Luigi!</h1>
-            <h2>Software Developer</h2>
-            <p>Per la versione italiana clicca qui</p>
-            <a href={Utils.resolvePageUrl('../', 'it', 'about')}>
-              <Img
-                fixed={flagIt.childImageSharp.fixed}
-                style={{ display: 'block', margin: 'auto' }}
-              />
-            </a>
+            <h1>Hi, I'm Allan!</h1>
+            <h2>Full Stack Software Developer</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              cursus venenatis arcu, cursus pretium enim lacinia nec. Duis
-              viverra sagittis neque. Fusce non luctus urna. Vivamus suscipit
-              metus ac posuere egestas. Nunc a pulvinar purus. Vivamus nisi mi,
-              fringilla quis lacus et, sagittis mollis massa. Cras tempus massa
-              quis lobortis laoreet. Pellentesque metus odio, sagittis nec
-              venenatis non, maximus congue eros. Suspendisse pellentesque purus
-              sit amet ante commodo, et molestie mauris aliquet. Proin non nibh
-              libero. Fusce at nulla euismod, condimentum augue quis, convallis
-              justo.
+              A creative, responsible and self-motivated developer who possesses
+              strong technical knowledge and delivers solid systems. I am a very
+              adapt developer with 12 years of experience with back-end and
+              front-end applications. As a Senior Developer, I have helped
+              companies where I worked to improve their development process and
+              made software with high value for the business with high code and
+              design quality. I am driven to automate everything possible. If I
+              have to do the same thing twice, so it time to automate that
+              thing. I always try to have ownership in the projects that I have
+              worked and for that, I need to not only like what I am doing but
+              also believe in the project and company. I love to lead the
+              adoption of new technologies, helping my team to be more efficient
+              and have more performance.
             </p>
             <br />
             <h2>Skills</h2>
@@ -164,11 +150,18 @@ export const query = graphql`
 // Use to set specific icons names
 export const iconsNameMap = {
   css: 'CSS',
+  angular: 'Angular 2+',
   html: 'HTML',
   jquery: 'JQuery',
   nodejs: 'Node.js',
-  vuejs: 'Vue.js',
-  gruntjs: 'Grunt.js',
+  java: 'Java 8+',
+  aws: 'AWS Cloud',
+  csharp: 'C#',
+  kafka: 'Apache Kafka',
+  mongodb: 'MongoDB',
+  netcore: '.Net Core',
+  rabbitmq: 'RabbitMQ',
+  sqlserver: 'Sql Server'
 }
 
 export default About
