@@ -5,9 +5,6 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
-  PinterestShareButton,
-  TumblrShareButton,
-  RedditShareButton,
   WhatsappShareButton,
   EmailShareButton,
 } from 'react-share'
@@ -16,9 +13,6 @@ import {
   FaFacebookSquare,
   FaTwitterSquare,
   FaLinkedin,
-  FaPinterestSquare,
-  FaTumblrSquare,
-  FaRedditSquare,
   FaWhatsappSquare,
   FaEnvelopeSquare,
 } from 'react-icons/fa'
@@ -39,26 +33,8 @@ const Share = ({ pageCanonicalUrl, title, description, tags, coverUrl }) => (
           title={title}
           description={description}
         >
-          <FaLinkedin color="#283e4a" />
+          <FaLinkedin color="#0177b5" />
         </LinkedinShareButton>
-        <PinterestShareButton
-          url={pageCanonicalUrl}
-          media={coverUrl}
-          description={description}
-        >
-          <FaPinterestSquare color="#e60023" />
-        </PinterestShareButton>
-        <TumblrShareButton
-          url={pageCanonicalUrl}
-          title={title}
-          tags={tags}
-          caption={description}
-        >
-          <FaTumblrSquare color="#36465d" />
-        </TumblrShareButton>
-        <RedditShareButton url={pageCanonicalUrl} title={title}>
-          <FaRedditSquare color="#ff4500" />
-        </RedditShareButton>
         <WhatsappShareButton
           url={pageCanonicalUrl}
           title={title}
