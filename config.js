@@ -4,7 +4,7 @@ module.exports = {
   siteUrl: 'https://blog.allanweber.dev/',
   siteTitle: 'AllanWeber.DEV',
   siteDescription: 'Logbook of a full stack software developer',
-  author: 'lcolella',
+  author: 'allanweber',
   postsForArchivePage: 3,
   defaultLanguage: 'en',
   disqusScript: 'https://allan-blog.disqus.com/embed.js',
@@ -53,6 +53,10 @@ module.exports = {
     vuejs: {
       name: 'Vue.js',
       description: 'Vue.js is a JavaScript framework for building interactive web applications.'
+    },
+    java: {
+      name: 'Java',
+      description: 'Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.'
     }
   }
 }
