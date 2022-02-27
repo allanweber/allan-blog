@@ -1,13 +1,13 @@
 /* Vendor imports */
-import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Config from '../../config'
+import ArchivePagination from '../components/archive-pagination'
 /* App imports */
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import PostList from '../components/post-list'
-import ArchivePagination from '../components/archive-pagination'
-import Config from '../../config'
+import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -28,6 +28,7 @@ IndexPage.propTypes = {
 export const query = graphql`
   {
     allMarkdownRemark(
+      limit: 5
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/index.md$/" } }
     ) {
