@@ -1,5 +1,5 @@
 ---
-title: Quick start to java
+title: Quick start with to Java in the backend
 tags: [java]
 date: 2022-02-26T05:25:44.226Z
 path: blog/quick-start-to-java
