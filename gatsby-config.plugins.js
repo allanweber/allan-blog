@@ -2,6 +2,19 @@ const config = require('./config')
 const feedPlugin = require('./gatsby-config.plugins.feed')
 
 module.exports = [
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: ['G-D5TBB5YZ5E'],
+      gtagConfig: {
+        cookie_expires: 0,
+        send_page_view: true,
+      },
+      pluginConfig: {
+        head: true,
+      },
+    },
+  },
   'gatsby-plugin-react-helmet',
   'gatsby-transformer-sharp',
   'gatsby-plugin-sharp',
@@ -61,11 +74,4 @@ module.exports = [
   feedPlugin,
   `gatsby-plugin-sitemap`,
   `gatsby-plugin-robots-txt`,
-  {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      trackingId: 'G-Z2NK0XTQB7',
-      head: true,
-    },
-  },
 ]
